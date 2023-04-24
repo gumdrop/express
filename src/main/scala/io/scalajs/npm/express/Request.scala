@@ -107,7 +107,7 @@ trait Request extends ClientRequest {
   /**
     * Contains the path part of the request URL.
     */
-  def path: String = js.native
+  override def path: String = js.native
 
   /**
     * Contains the request protocol string: either http or (for TLS requests) https.

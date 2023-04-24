@@ -4,9 +4,8 @@ import io.scalajs.nodejs.Error
 import io.scalajs.nodejs.events.IEventEmitter
 import io.scalajs.nodejs.http.Server
 import io.scalajs.util.PromiseHelper._
-
-import scala.scalajs.js
-import scala.scalajs.js.|
+import scalajs.js
+import scalajs.js.|
 
 /**
   * The app object conventionally denotes the Express application. Create it by calling the

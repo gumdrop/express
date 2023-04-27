@@ -1,6 +1,6 @@
 val scalaJsIOVersion = "0.4.3"
 val apiVersion = scalaJsIOVersion
-val theScalaVersion = "2.13.10"
+val theScalaVersion = "3.2.2"
 
 //homepage := Some(url("https://github.com/scalajs-io/express"))
 
@@ -19,8 +19,8 @@ lazy val root = (project in file(".")).
     //scalacOptions += "-P:scalajs:sjsDefinedByDefault",
     autoCompilerPlugins := true,
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) },
-    libraryDependencies += "org.scala-lang" % "scala-reflect" % theScalaVersion % Provided,
-    libraryDependencies += "net.exoego" %%% "scala-js-nodejs-v16" % "0.14.0"
+    //libraryDependencies += "org.scala-lang" % "scala-reflect" % theScalaVersion % Provided,
+    libraryDependencies += ("net.exoego" %%% "scala-js-nodejs-v16" % "0.14.0").cross(CrossVersion.for3Use2_13)
 //	    "org.scalatest" %%% "scalatest" % "3.0.1" % "test",
 //	    "io.scalajs" %%% "nodejs-core" % scalaJsIOVersion
   )
